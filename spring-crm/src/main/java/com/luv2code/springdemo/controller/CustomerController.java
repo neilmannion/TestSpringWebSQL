@@ -23,15 +23,16 @@ public class CustomerController {
 	private CustomerService customerService;
 	
 	@GetMapping("/list")
-	public String listCustomers(Model theModel) {
+	public String listCustomers(/*Model theModel*/) {
 		
 		// get customers from the service
-		List<Customer> theCustomers = customerService.getCustomers();
+		//List<Customer> theCustomers = customerService.getCustomers();
 				
 		// add the customers to the model
-		theModel.addAttribute("customers", theCustomers);
+		//theModel.addAttribute("customers", theCustomers);
 		
-		return "list-customers";
+		//return "list-customers";
+		return "snake"; ///remove this
 	}
 
 	@GetMapping("/info")
